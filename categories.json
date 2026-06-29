@@ -1,22 +1,26 @@
 {
   "pluginCategories": [
-    {"id": "model-control", "name": "模型控制", "icon": "🧠"},
-    {"id": "workspace", "name": "工作区", "icon": "📁"},
-    {"id": "search", "name": "搜索增强", "icon": "🔍"},
-    {"id": "media", "name": "媒体生成", "icon": "🎨"},
-    {"id": "knowledge", "name": "知识管理", "icon": "📝"},
-    {"id": "automation", "name": "自动化", "icon": "⚡"},
-    {"id": "dev-tools", "name": "开发工具", "icon": "🛠️"},
-    {"id": "other-plugin", "name": "其他", "icon": "📦"}
+    {"id": "model-control", "name": "模型控制", "icon": "🧠", "description": "AI模型相关配置和控制"},
+    {"id": "workspace", "name": "工作区", "icon": "📁", "description": "文件管理、项目管理"},
+    {"id": "search", "name": "搜索增强", "icon": "🔍", "description": "搜索工具和优化"},
+    {"id": "media", "name": "媒体生成", "icon": "🎨", "description": "图片、视频、音频生成"},
+    {"id": "knowledge", "name": "知识管理", "icon": "📝", "description": "笔记、知识库"},
+    {"id": "automation", "name": "自动化", "icon": "⚡", "description": "任务自动化、脚本"},
+    {"id": "dev-tools", "name": "开发工具", "icon": "🛠️", "description": "代码开发辅助"},
+    {"id": "system", "name": "系统管理", "icon": "🖥️", "description": "系统监控、备份"},
+    {"id": "community", "name": "社区工具", "icon": "👥", "description": "社区互动、分享"},
+    {"id": "other-plugin", "name": "其他", "icon": "📦", "description": "其他插件"}
   ],
   "skillCategories": [
-    {"id": "note-taking", "name": "笔记与写作", "icon": "✍️"},
-    {"id": "exam-prep", "name": "考试备考", "icon": "📚"},
-    {"id": "job-hunting", "name": "求职就业", "icon": "💼"},
-    {"id": "system-admin", "name": "系统管理", "icon": "🖥️"},
-    {"id": "dev-ops", "name": "开发运维", "icon": "🔧"},
-    {"id": "media-creation", "name": "媒体创作", "icon": "🎬"},
-    {"id": "life-tools", "name": "生活工具", "icon": "🏠"},
-    {"id": "other-skill", "name": "其他", "icon": "📦"}
+    {"id": "note-taking", "name": "笔记与写作", "icon": "✍️", "description": "笔记整理、写作辅助"},
+    {"id": "exam-prep", "name": "考试备考", "icon": "📚", "description": "学习资料、考试准备"},
+    {"id": "job-hunting", "name": "求职就业", "icon": "💼", "description": "简历、面试准备"},
+    {"id": "system-admin", "name": "系统管理", "icon": "🖥️", "description": "系统监控、维护"},
+    {"id": "dev-ops", "name": "开发运维", "icon": "🔧", "description": "代码开发、部署"},
+    {"id": "media-creation", "name": "媒体创作", "icon": "🎬", "description": "图片、视频处理"},
+    {"id": "life-tools", "name": "生活工具", "icon": "🏠", "description": "日常生活辅助"},
+    {"id": "learning", "name": "学习教育", "icon": "📖", "description": "学习资料、教育"},
+    {"id": "career", "name": "职业发展", "icon": "🚀", "description": "职业规划、技能提升"},
+    {"id": "other-skill", "name": "其他", "icon": "📦", "description": "其他技能"}
   ]
 }
