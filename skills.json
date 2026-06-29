@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "id": "tool-failure-analyzer",
+    "type": "skill",
+    "name": "工具失败分析",
+    "description": "自动分析工具调用失败原因，检索经验库并推导最优修复路径",
+    "usage": "工具调用失败时自动触发，无需手动操作",
+    "author": {
+      "name": "hayou2002",
+      "github": "hayou2002"
+    },
+    "repo": "hayou2002/tool-failure-analyzer",
+    "version": "1.0.0",
+    "minHanaVersion": "0.82.0",
+    "category": "dev-tools",
+    "tags": [
+      "调试",
+      "诊断",
+      "经验库"
+    ],
+    "location": ".",
+    "based_on": null,
+    "created_at": "2026-06-25T06:00:00Z",
+    "updated_at": "2026-06-29T05:20:00Z"
+  }
+]
