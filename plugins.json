@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "id": "plugin-marketplace",
+    "type": "plugin",
+    "name": "插件市场",
+    "description": "OpenHanako 插件 & Skill 中心。浏览、搜索、安装社区内容。",
+    "usage": "安装后在顶栏打开市场页面即可浏览",
+    "author": {
+      "name": "hayou2002",
+      "github": "hayou2002"
+    },
+    "repo": "hayou2002/plugin-marketplace",
+    "version": "0.1.0",
+    "minHanaVersion": "0.348.0",
+    "category": "dev-tools",
+    "tags": [
+      "市场",
+      "商店",
+      "社区"
+    ],
+    "based_on": null,
+    "created_at": "2026-06-29T13:00:00Z",
+    "updated_at": "2026-06-29T13:00:00Z"
+  }
+]
