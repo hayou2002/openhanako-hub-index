@@ -21,5 +21,75 @@
     "based_on": null,
     "created_at": "2026-06-29T13:00:00Z",
     "updated_at": "2026-06-29T13:00:00Z"
+  },
+  {
+    "id": "thinking-language",
+    "type": "plugin",
+    "name": "思考语言控制",
+    "description": "强制 AI 推理过程使用中文，支持多锚点策略与自检协议",
+    "usage": "安装后在插件设置中启用，Agent 对话中自动生效",
+    "author": {
+      "name": "hayou2002",
+      "github": "hayou2002"
+    },
+    "repo": "hayou2002/think-lang-control",
+    "version": "3.6.0",
+    "minHanaVersion": "0.159.0",
+    "category": "model-control",
+    "tags": [
+      "中文",
+      "推理",
+      "思考语言"
+    ],
+    "based_on": null,
+    "created_at": "2026-06-15T08:00:00Z",
+    "updated_at": "2026-06-29T05:54:00Z"
+  },
+  {
+    "id": "plugin-hub",
+    "type": "plugin",
+    "name": "插件抽屉",
+    "description": "管理顶栏插件置顶、下拉收纳和文件夹分类",
+    "usage": "在顶栏点击抽屉图标，设置哪些插件固定显示",
+    "author": {
+      "name": "hayou2002",
+      "github": "hayou2002"
+    },
+    "repo": "hayou2002/plugin-hub",
+    "version": "1.2.0",
+    "minHanaVersion": "0.82.0",
+    "category": "workspace",
+    "tags": [
+      "顶栏",
+      "抽屉",
+      "收纳"
+    ],
+    "based_on": null,
+    "created_at": "2026-06-10T10:00:00Z",
+    "updated_at": "2026-06-29T05:05:00Z"
+  },
+  {
+    "id": "hana-backup",
+    "type": "plugin",
+    "name": "数据备份",
+    "description": "一键备份/迁移 Hanako 数据到本地、WebDAV 或 S3 对象存储",
+    "usage": "点击顶栏备份图标，选择备份目标和存ઠ方式",
+    "author": {
+      "name": "放线菌",
+      "github": "hayou2002"
+    },
+    "repo": "hayou2002/hana-backup-s3",
+    "version": "2.3.0",
+    "minHanaVersion": "0.82.0",
+    "category": "dev-tools",
+    "tags": [
+      "备份",
+      "迁移",
+      "S3",
+      "WebDAV"
+    ],
+    "based_on": null,
+    "created_at": "2026-06-20T06:00:00Z",
+    "updated_at": "2026-06-26T04:46:00Z"
   }
 ]
