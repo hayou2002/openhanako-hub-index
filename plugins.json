@@ -95,24 +95,5 @@
     "based_on": null,
     "created_at": "2026-06-20T06:00:00Z",
     "updated_at": "2026-06-26T04:46:00Z"
-  },
-  {
-    "id": "allow-http-auth",
-    "type": "plugin",
-    "name": "允许HTTP密码登录",
-    "description": "启动时自动修补 Hana 服务端，移除密码登录的 HTTPS 检查，让用户可以通过 HTTP 隧道用账号密码登录。",
-    "usage": "",
-    "author": {
-      "name": "hayou2002",
-      "github": "hayou2002"
-    },
-    "repo": "hayou2002/hanako-plugin-allow-http-auth",
-    "version": "1.0.0",
-    "category": "automation",
-    "tags": [],
-    "stars": 0,
-    "based_on": null,
-    "created_at": "2026-06-30T04:56:33.862Z",
-    "updated_at": "2026-06-30T04:56:33.862Z"
   }
 ]
