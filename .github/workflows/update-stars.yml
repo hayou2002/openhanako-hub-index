@@ -29,16 +29,27 @@ jobs:
           # 提取所有 repo
           ALL_REPOS=$(echo "$PL" | jq -r '.[].repo' && echo "$SK" | jq -r '.[].repo')
 
-          # 逐个查询 star 并更新
+          # 逐个查询 star 并更新，同时检查仓库是否存在
           NEW_PL="$PL"
           NEW_SK="$SK"
+          REMOVED_PL="[]"
+          REMOVED_SK="[]"
 
           for repo in $ALL_REPOS; do
-            stars=$(gh api "repos/$repo" --jq '.stargazers_count' 2>/dev/null || echo "0")
-            NEW_PL=$(echo "$NEW_PL" | jq --arg repo "$repo" --argjson stars "$stars" \
-              'map(if .repo == $repo then .stars = $stars else . end)')
-            NEW_SK=$(echo "$NEW_SK" | jq --arg repo "$repo" --argjson stars "$stars" \
-              'map(if .repo == $repo then .stars = $stars else . end)')
+            # 检查仓库是否存在
+            status=$(gh api "repos/$repo" --jq '.stargazers_count' 2>&1 || echo "NOT_FOUND")
+            if echo "$status" | grep -q "NOT_FOUND\|404"; then
+              # 仓库不存在，从索引中移除
+              NEW_PL=$(echo "$NEW_PL" | jq --arg repo "$repo" '[.[] | select(.repo != $repo)]')
+              NEW_SK=$(echo "$NEW_SK" | jq --arg repo "$repo" '[.[] | select(.repo != $repo)]')
+              echo "removed: $repo"
+            else
+              stars="$status"
+              NEW_PL=$(echo "$NEW_PL" | jq --arg repo "$repo" --argjson stars "$stars" \
+                'map(if .repo == $repo then .stars = $stars else . end)')
+              NEW_SK=$(echo "$NEW_SK" | jq --arg repo "$repo" --argjson stars "$stars" \
+                'map(if .repo == $repo then .stars = $stars else . end)')
+            fi
           done
 
           # 写回
