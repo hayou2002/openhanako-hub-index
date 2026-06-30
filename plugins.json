@@ -95,5 +95,24 @@
     "based_on": null,
     "created_at": "2026-06-20T06:00:00Z",
     "updated_at": "2026-06-26T04:46:00Z"
+  },
+  {
+    "id": "allow-http-auth",
+    "type": "plugin",
+    "name": "允许HTTP密码登录",
+    "description": "自动修补Hana服务端，移除密码登录的HTTPS检查，支持通过HTTP隧道用账号密码登录。",
+    "usage": "安装此插件后，启动Hana即可自动生效。它会修补服务端文件，允许通过HTTP隧道使用密码登录。",
+    "author": {
+      "name": "hayou2002",
+      "github": "hayou2002"
+    },
+    "repo": "hayou2002/hana-http-password-login",
+    "version": "1.0.0",
+    "category": "system",
+    "tags": [],
+    "stars": 0,
+    "based_on": null,
+    "created_at": "2026-06-30T13:00:39.932Z",
+    "updated_at": "2026-06-30T13:00:39.932Z"
   }
 ]
