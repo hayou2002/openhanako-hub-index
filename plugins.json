@@ -114,5 +114,24 @@
     "based_on": null,
     "created_at": "2026-06-30T13:00:39.932Z",
     "updated_at": "2026-06-30T13:00:39.932Z"
+  },
+  {
+    "id": "allow-http-auth",
+    "type": "plugin",
+    "name": "允许HTTP密码登录",
+    "description": "自动修补Hana服务端，移除密码登录的HTTPS检查，允许通过HTTP隧道登录。",
+    "usage": "在Hana插件市场搜索“allow-http-auth”安装，或使用命令行 `hana install 求放过/allow-http-auth`。安装后启动Hana，插件将自动完成修补，之后即可通过HTTP隧道使用密码登录。",
+    "author": {
+      "name": null,
+      "github": null
+    },
+    "repo": "hayou2002/hana-http-login-patch",
+    "version": "1.0.0",
+    "category": "system",
+    "tags": [],
+    "stars": 0,
+    "based_on": null,
+    "created_at": "2026-06-30T13:05:12.324Z",
+    "updated_at": "2026-06-30T13:05:12.324Z"
   }
 ]
