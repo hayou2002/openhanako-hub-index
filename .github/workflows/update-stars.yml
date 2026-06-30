@@ -4,15 +4,17 @@ on:
     - cron: '0 */6 * * *'  # 每6小时运行一次
   workflow_dispatch:  # 手动触发
 
+permissions:
+  contents: write
+
 jobs:
   update-stars:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
+      - name: Install gh CLI
+        run: sudo apt-get install -y gh
 
       - name: Update star counts
         env:
@@ -24,7 +26,7 @@ jobs:
           PL_SHA=$(gh api repos/${{ github.repository }}/contents/plugins.json --jq '.sha')
           SK_SHA=$(gh api repos/${{ github.repository }}/contents/skills.json --jq '.sha')
 
-          # 提取所有 repo 并查询 star
+          # 提取所有 repo
           ALL_REPOS=$(echo "$PL" | jq -r '.[].repo' && echo "$SK" | jq -r '.[].repo')
 
           # 逐个查询 star 并更新
@@ -33,10 +35,8 @@ jobs:
 
           for repo in $ALL_REPOS; do
             stars=$(gh api "repos/$repo" --jq '.stargazers_count' 2>/dev/null || echo "0")
-            # 更新 plugins.json
             NEW_PL=$(echo "$NEW_PL" | jq --arg repo "$repo" --argjson stars "$stars" \
               'map(if .repo == $repo then .stars = $stars else . end)')
-            # 更新 skills.json
             NEW_SK=$(echo "$NEW_SK" | jq --arg repo "$repo" --argjson stars "$stars" \
               'map(if .repo == $repo then .stars = $stars else . end)')
           done
