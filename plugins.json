@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "id": "jiyuan-compat-fix",
+    "type": "plugin",
+    "name": "基元律动修复插件",
+    "description": "修复严格校验上游（基元律动 tokenrhythm.studio）对未知字段返回 400 的问题：剥离 prompt_cache_key/thinking 内部字段，解决 thinking 与 reasoning_effort 冲突并恢复思考深度",
+    "usage": "安装后自动生效，无需手动操作；Agent 可调用 diagnose_model_400 诊断",
+    "author": {
+      "name": "hayou2002",
+      "github": "hayou2002"
+    },
+    "repo": "hayou2002/jiyuan-compat-fix",
+    "version": "0.1.1",
+    "minHanaVersion": "0.159.0",
+    "category": "model-control",
+    "tags": [
+      "400修复",
+      "上游兼容",
+      "prompt_cache_key",
+      "思考深度"
+    ],
+    "location": ".",
+    "based_on": null,
+    "created_at": "2026-08-06T00:00:00Z",
+    "updated_at": "2026-08-06T12:00:00Z",
+    "stars": 0
+  }
+]
